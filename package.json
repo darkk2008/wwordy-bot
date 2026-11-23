@@ -1,0 +1,23 @@
+{
+  "name": "wwordy-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "wwordy Telegram bot: Wizzy shows you a word, you say whether you know it",
+  "scripts": {
+    "test": "vitest run",
+    "webhook": "node --env-file=.env scripts/set-webhook.mjs",
+    "webhook:delete": "node --env-file=.env scripts/set-webhook.mjs --delete",
+    "local": "node --env-file=.env scripts/local.mjs",
+    "sync-words": "node scripts/sync-words.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=20.6"
+  }
+}

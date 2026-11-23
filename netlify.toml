@@ -1,0 +1,10 @@
+# wwordy-bot: no build step. Netlify just publishes a tiny status page and runs the webhook function.
+[build]
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
